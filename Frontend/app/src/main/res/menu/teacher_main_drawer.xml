@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!-- Dashboard remains as-is -->
+        <item
+            android:id="@+id/nav_home"
+            android:title="Dashboard" />
+
+        <!-- Courses item to navigate to the Courses list page -->
+        <item
+            android:id="@+id/nav_courses"
+            android:title="Courses" />
+
+        <!-- Profile remains as-is -->
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_ask_ai"
+            android:title="Ask AI" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+
+    </group>
+</menu>

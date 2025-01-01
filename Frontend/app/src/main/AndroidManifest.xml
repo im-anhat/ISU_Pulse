@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ISU_Pulse_Frontend"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="35">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.coms309.isu_pulse_frontend.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name=".loginsignup.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile_activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".student_display.DisplayStudent"
+            android:exported="false" />
+        <activity
+            android:name=".chat_system.ChatList"
+            android:exported="false" />
+        <activity
+            android:name=".chat_system.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat_system.GroupChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat_system.GroupChatCreating"
+            android:exported="false" />
+        <activity
+            android:name=".chat_system.GroupChatAddingMember"
+            android:exported="false" />
+        <activity
+            android:name=".profile_activity.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".friend_functional.FriendList"
+            android:exported="false" />
+        <activity
+            android:name=".friend_functional.FriendProfile"
+            android:exported="false" />
+        <activity
+            android:name=".friend_functional.FriendRequest"
+            android:exported="false" />
+        <activity
+            android:name=".friend_functional.FriendSuggestion"
+            android:exported="false" />
+        <activity
+            android:name=".friend_functional.FriendSentRequest"
+            android:exported="false" />
+        <activity
+            android:name=".loginsignup.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".loginsignup.ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".course_functional.CourseView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".course_functional.CourseItem"
+            android:exported="false" />
+        <activity
+            android:name=".course_functional.AddCourse"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ask_ai.AskAiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.calendar.ClassCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ISU_Pulse_Frontend.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
